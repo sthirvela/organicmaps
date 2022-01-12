@@ -70,7 +70,7 @@ public final class PermissionsUtils
   {
     boolean locationGranted = (result.containsKey(ACCESS_COARSE_LOCATION)
                                ? result.get(ACCESS_COARSE_LOCATION) : false)
-                              || (result.containsKey(ACCESS_FINE_LOCATION)
+                              && (result.containsKey(ACCESS_FINE_LOCATION)
                                   ? result.get(ACCESS_FINE_LOCATION) : false);
     return new PermissionsResult(locationGranted);
   }
